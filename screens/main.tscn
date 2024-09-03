@@ -1,7 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://blm40w5nlxk8t"]
+[gd_scene load_steps=2 format=3 uid="uid://blm40w5nlxk8t"]
 
-[ext_resource type="Script" path="res://player.gd" id="1_g5tl8"]
-[ext_resource type="Texture2D" uid="uid://bb36r4crpguyv" path="res://assets/sprites/character/character01.png" id="1_ojrgd"]
+[ext_resource type="PackedScene" uid="uid://du8q0gji72o2f" path="res://parts/player/player.tscn" id="1_5dhsp"]
 
 [node name="Main" type="Node"]
 
@@ -47,28 +46,5 @@ polygon = PackedVector2Array(117, 66, 98, 562, 967, 567, 967, 64)
 color = Color(0.313726, 0.309804, 0.317647, 1)
 polygon = PackedVector2Array(627, 125, 616, 265, 534, 205, 465, 208, 271, 238, 275, 291, 274, 383, 585, 405, 588, 379, 308, 356, 299, 255, 500, 242, 646, 314, 648, 144, 761, 321, 741, 110)
 
-[node name="Player" type="CharacterBody2D" parent="."]
-position = Vector2(390, 324)
-script = ExtResource("1_g5tl8")
-max_speed = 50.0
-deceleration = 100.0
-
-[node name="Sprite2D" type="Sprite2D" parent="Player"]
-scale = Vector2(3, 3)
-texture = ExtResource("1_ojrgd")
-
-[node name="HealthLabel" type="Label" parent="Player"]
-offset_left = -32.0
-offset_top = -40.0
-offset_right = 32.0
-offset_bottom = -17.0
-text = "H: 10/10"
-metadata/_edit_use_anchors_ = true
-
-[node name="CoinsLabel" type="Label" parent="Player"]
-offset_left = -31.0
-offset_top = -54.0
-offset_right = 9.0
-offset_bottom = -31.0
-text = "C: 0"
-metadata/_edit_use_anchors_ = true
+[node name="Player" parent="." instance=ExtResource("1_5dhsp")]
+position = Vector2(457, 325)

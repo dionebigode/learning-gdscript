@@ -1,0 +1,5 @@
+[gd_scene format=3 uid="uid://culcy55h3m5pj"]
+
+[node name="ExtraWalls" type="Polygon2D"]
+color = Color(0.313726, 0.309804, 0.317647, 1)
+polygon = PackedVector2Array(627, 125, 616, 265, 534, 205, 465, 208, 271, 238, 275, 291, 274, 383, 585, 405, 588, 379, 308, 356, 299, 255, 500, 242, 646, 314, 648, 144, 761, 321, 741, 110)

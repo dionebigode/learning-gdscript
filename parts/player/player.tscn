@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://du8q0gji72o2f"]
+
+[ext_resource type="Script" path="res://parts/player/player.gd" id="1_phhsx"]
+[ext_resource type="Texture2D" uid="uid://bb36r4crpguyv" path="res://assets/sprites/character/character01.png" id="2_bvhy0"]
+
+[node name="Player" type="CharacterBody2D"]
+script = ExtResource("1_phhsx")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(3, 3)
+texture = ExtResource("2_bvhy0")
+
+[node name="HealthLabel" type="Label" parent="."]
+offset_left = -32.0
+offset_top = -40.0
+offset_right = 32.0
+offset_bottom = -17.0
+text = "H: 10/10"
+metadata/_edit_use_anchors_ = true
+
+[node name="CoinsLabel" type="Label" parent="."]
+offset_left = -31.0
+offset_top = -54.0
+offset_right = 9.0
+offset_bottom = -31.0
+text = "C: 0"
+metadata/_edit_use_anchors_ = true
